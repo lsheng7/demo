@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-parent</artifactId>
+    <version>2.2.2.RELEASE</version>
+    <relativePath/>
+  </parent>
+  <groupId>com.example</groupId>
+  <artifactId>demo</artifactId>
+  <version>1.0</version>
+  <name>demo</name>
+  <description>demo</description>
+  <properties>
+    <java.version>1.8</java.version>
+    <logbook.version>2.9.0</logbook.version>
+    <postgresql.version>42.2.8</postgresql.version>
+  </properties>
+  <dependencies>
+    <!-- 去掉springboot默认配置 -->
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-web</artifactId>
+      <!--      <exclusions>-->
+      <!--        <exclusion>-->
+      <!--          <groupId>org.springframework.boot</groupId>-->
+      <!--          <artifactId>spring-boot-starter-logging</artifactId>-->
+      <!--        </exclusion>-->
+      <!--      </exclusions>-->
+    </dependency>
+    <!--knife4j-->
+    <dependency>
+      <groupId>com.github.xiaoymin</groupId>
+      <artifactId>knife4j-spring-boot-starter</artifactId>
+      <version>2.0.7</version>
+    </dependency>
+    <!-- 引入log4j2依赖 -->
+    <!--    <dependency>-->
+    <!--      <groupId>org.springframework.boot</groupId>-->
+    <!--      <artifactId>spring-boot-starter-log4j2</artifactId>-->
+    <!--    </dependency>-->
+    <!--引入lombok依赖-->
+    <dependency>
+      <groupId>org.projectlombok</groupId>
+      <artifactId>lombok</artifactId>
+    </dependency>
+    <!--logbook-starter-->
+    <dependency>
+      <groupId>org.zalando</groupId>
+      <artifactId>logbook-spring-boot-starter</artifactId>
+      <version>${logbook.version}</version>
+    </dependency>
+    <!--guava-->
+    <dependency>
+      <groupId>com.google.guava</groupId>
+      <artifactId>guava</artifactId>
+      <version>18.0</version>
+    </dependency>
+    <!--    &lt;!&ndash;postgresql&ndash;&gt;-->
+    <!--    <dependency>-->
+    <!--      <groupId>org.postgresql</groupId>-->
+    <!--      <artifactId>postgresql</artifactId>-->
+    <!--      <version>${postgresql.version}</version>-->
+    <!--      <scope>runtime</scope>-->
+    <!--    </dependency>-->
+    <!--    &lt;!&ndash;flywaydb&ndash;&gt;-->
+    <!--    <dependency>-->
+    <!--      <groupId>org.flywaydb</groupId>-->
+    <!--      <artifactId>flyway-core</artifactId>-->
+    <!--    </dependency>-->
+    <!--    <dependency>-->
+    <!--      <groupId>org.springframework.boot</groupId>-->
+    <!--      <artifactId>spring-boot-starter-jdbc</artifactId>-->
+    <!--    </dependency>-->
+    <dependency>
+      <groupId>cn.hutool</groupId>
+      <artifactId>hutool-all</artifactId>
+      <version>5.1.2</version>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-maven-plugin</artifactId>
+      </plugin>
+      <plugin>
+        <groupId>org.flywaydb</groupId>
+        <artifactId>flyway-maven-plugin</artifactId>
+        <configuration>
+          <user>postgres</user>
+          <password>Qr@77.88</password>
+          <driver>org.postgresql.Driver</driver>
+          <url>jdbc:postgresql://192.168.0.99:5432/runoobdb</url>
+          <baselineOnMigrate>true</baselineOnMigrate>
+          <!-- //sql脚本位置，flyway会自动去找到这个目录并且执行里面的sql脚本 -->
+          <locations>classpath:db/migration/</locations>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+</project>
