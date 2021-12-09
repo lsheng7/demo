@@ -1,0 +1,3 @@
+[submodule "sub-demo"]
+	path = sub-demo
+	url = git@github.com:lsheng7/sub-demo.git
