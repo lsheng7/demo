@@ -1,140 +1,21 @@
-2021-12-02 09:01:49.646 [main] INFO  com.example.demo.DemoApplication - Starting DemoApplication using Java 1.8.0_311 on 吕升 with PID 11312 (E:\personal\project\demo\target\classes started by sheng.lv in E:\personal\project\demo)
-2021-12-02 09:01:49.688 [main] INFO  com.example.demo.DemoApplication - No active profile set, falling back to default profiles: default
-2021-12-02 09:01:50.442 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
-2021-12-02 09:01:50.442 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
-2021-12-02 09:01:50.442 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.54]
-2021-12-02 09:01:50.517 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2021-12-02 09:01:50.745 [main] INFO  springfox.documentation.spring.web.WebMvcPropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
-2021-12-02 09:01:50.924 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
-2021-12-02 09:01:50.936 [main] INFO  springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper - Documentation plugins bootstrapped
-2021-12-02 09:01:50.940 [main] INFO  springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
-2021-12-02 09:01:50.961 [main] INFO  springfox.documentation.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
-2021-12-02 09:01:51.008 [main] INFO  com.example.demo.DemoApplication - Started DemoApplication in 1.661 seconds (JVM running for 2.544)
-2021-12-02 09:02:09.734 [http-nio-8888-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-12-02 11:52:12.136 [main] INFO  com.example.demo.DemoApplication - Starting DemoApplication using Java 1.8.0_311 on 吕升 with PID 4148 (E:\personal\project\demo\target\classes started by sheng.lv in E:\personal\project\demo)
-2021-12-02 11:52:12.146 [main] INFO  com.example.demo.DemoApplication - No active profile set, falling back to default profiles: default
-2021-12-02 11:52:12.916 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
-2021-12-02 11:52:12.917 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
-2021-12-02 11:52:12.917 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.54]
-2021-12-02 11:52:12.990 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2021-12-02 11:52:13.214 [main] INFO  springfox.documentation.spring.web.WebMvcPropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
-2021-12-02 11:52:13.393 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
-2021-12-02 11:52:13.405 [main] INFO  springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper - Documentation plugins bootstrapped
-2021-12-02 11:52:13.408 [main] INFO  springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
-2021-12-02 11:52:13.429 [main] INFO  springfox.documentation.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
-2021-12-02 11:52:13.477 [main] INFO  com.example.demo.DemoApplication - Started DemoApplication in 1.671 seconds (JVM running for 2.623)
-2021-12-02 11:52:23.887 [http-nio-8888-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-12-02 11:54:41.903 [main] INFO  com.example.demo.DemoApplication - Starting DemoApplication using Java 1.8.0_311 on 吕升 with PID 10024 (E:\personal\project\demo\target\classes started by sheng.lv in E:\personal\project\demo)
-2021-12-02 11:54:41.911 [main] INFO  com.example.demo.DemoApplication - No active profile set, falling back to default profiles: default
-2021-12-02 11:54:42.664 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
-2021-12-02 11:54:42.664 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
-2021-12-02 11:54:42.665 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.54]
-2021-12-02 11:54:42.743 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2021-12-02 11:54:42.956 [main] INFO  springfox.documentation.spring.web.WebMvcPropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
-2021-12-02 11:54:43.130 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
-2021-12-02 11:54:43.142 [main] INFO  springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper - Documentation plugins bootstrapped
-2021-12-02 11:54:43.146 [main] INFO  springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
-2021-12-02 11:54:43.166 [main] INFO  springfox.documentation.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
-2021-12-02 11:54:43.214 [main] INFO  com.example.demo.DemoApplication - Started DemoApplication in 1.57 seconds (JVM running for 2.376)
-2021-12-02 11:54:51.723 [http-nio-8888-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-12-02 12:00:08.588 [main] INFO  com.example.demo.DemoApplication - Starting DemoApplication using Java 1.8.0_311 on 吕升 with PID 7776 (E:\personal\project\demo\target\classes started by sheng.lv in E:\personal\project\demo)
-2021-12-02 12:00:08.595 [main] INFO  com.example.demo.DemoApplication - No active profile set, falling back to default profiles: default
-2021-12-02 12:00:09.385 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
-2021-12-02 12:00:09.385 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
-2021-12-02 12:00:09.386 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.54]
-2021-12-02 12:00:09.465 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2021-12-02 12:00:09.681 [main] INFO  springfox.documentation.spring.web.WebMvcPropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
-2021-12-02 12:00:09.858 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
-2021-12-02 12:00:09.871 [main] INFO  springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper - Documentation plugins bootstrapped
-2021-12-02 12:00:09.874 [main] INFO  springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
-2021-12-02 12:00:09.897 [main] INFO  springfox.documentation.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
-2021-12-02 12:00:09.945 [main] INFO  com.example.demo.DemoApplication - Started DemoApplication in 1.621 seconds (JVM running for 2.445)
-2021-12-02 12:01:14.509 [main] INFO  com.example.demo.DemoApplication - Starting DemoApplication using Java 1.8.0_311 on 吕升 with PID 14696 (E:\personal\project\demo\target\classes started by sheng.lv in E:\personal\project\demo)
-2021-12-02 12:01:14.517 [main] INFO  com.example.demo.DemoApplication - No active profile set, falling back to default profiles: default
-2021-12-02 12:01:15.256 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
-2021-12-02 12:01:15.256 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
-2021-12-02 12:01:15.256 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.54]
-2021-12-02 12:01:15.334 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2021-12-02 12:01:15.546 [main] INFO  springfox.documentation.spring.web.WebMvcPropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
-2021-12-02 12:01:15.720 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
-2021-12-02 12:01:15.732 [main] INFO  springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper - Documentation plugins bootstrapped
-2021-12-02 12:01:15.736 [main] INFO  springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
-2021-12-02 12:01:15.755 [main] INFO  springfox.documentation.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
-2021-12-02 12:01:15.802 [main] INFO  com.example.demo.DemoApplication - Started DemoApplication in 1.549 seconds (JVM running for 2.525)
-2021-12-02 12:01:27.004 [http-nio-8888-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-12-02 12:24:22.731 [main] INFO  com.example.demo.DemoApplication - Starting DemoApplication using Java 1.8.0_311 on 吕升 with PID 15224 (E:\personal\project\demo\target\classes started by sheng.lv in E:\personal\project\demo)
-2021-12-02 12:24:22.768 [main] INFO  com.example.demo.DemoApplication - No active profile set, falling back to default profiles: default
-2021-12-02 12:24:23.574 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
-2021-12-02 12:24:23.574 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
-2021-12-02 12:24:23.575 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.54]
-2021-12-02 12:24:23.649 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2021-12-02 12:24:23.900 [main] INFO  springfox.documentation.spring.web.WebMvcPropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
-2021-12-02 12:24:24.079 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
-2021-12-02 12:24:24.092 [main] INFO  springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper - Documentation plugins bootstrapped
-2021-12-02 12:24:24.096 [main] INFO  springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
-2021-12-02 12:24:24.116 [main] INFO  springfox.documentation.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
-2021-12-02 12:24:24.164 [main] INFO  com.example.demo.DemoApplication - Started DemoApplication in 1.733 seconds (JVM running for 2.567)
-2021-12-02 12:24:37.305 [http-nio-8888-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-12-02 12:25:22.164 [main] INFO  com.example.demo.DemoApplication - Starting DemoApplication using Java 1.8.0_311 on 吕升 with PID 696 (E:\personal\project\demo\target\classes started by sheng.lv in E:\personal\project\demo)
-2021-12-02 12:25:22.171 [main] INFO  com.example.demo.DemoApplication - No active profile set, falling back to default profiles: default
-2021-12-02 12:25:22.924 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
-2021-12-02 12:25:22.924 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
-2021-12-02 12:25:22.924 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.54]
-2021-12-02 12:25:23.000 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2021-12-02 12:25:23.253 [main] INFO  springfox.documentation.spring.web.WebMvcPropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
-2021-12-02 12:25:23.431 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
-2021-12-02 12:25:23.444 [main] INFO  springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper - Documentation plugins bootstrapped
-2021-12-02 12:25:23.448 [main] INFO  springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
-2021-12-02 12:25:23.467 [main] INFO  springfox.documentation.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
-2021-12-02 12:25:23.517 [main] INFO  com.example.demo.DemoApplication - Started DemoApplication in 1.673 seconds (JVM running for 2.577)
-2021-12-02 12:26:06.961 [http-nio-8888-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-12-02 12:26:27.917 [main] INFO  com.example.demo.DemoApplication - Starting DemoApplication using Java 1.8.0_311 on 吕升 with PID 10148 (E:\personal\project\demo\target\classes started by sheng.lv in E:\personal\project\demo)
-2021-12-02 12:26:27.954 [main] INFO  com.example.demo.DemoApplication - No active profile set, falling back to default profiles: default
-2021-12-02 12:26:28.723 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
-2021-12-02 12:26:28.723 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
-2021-12-02 12:26:28.724 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.54]
-2021-12-02 12:26:28.799 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2021-12-02 12:26:29.062 [main] INFO  springfox.documentation.spring.web.WebMvcPropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
-2021-12-02 12:26:29.246 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
-2021-12-02 12:26:29.259 [main] INFO  springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper - Documentation plugins bootstrapped
-2021-12-02 12:26:29.263 [main] INFO  springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
-2021-12-02 12:26:29.283 [main] INFO  springfox.documentation.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
-2021-12-02 12:26:29.331 [main] INFO  com.example.demo.DemoApplication - Started DemoApplication in 1.712 seconds (JVM running for 2.748)
-2021-12-02 12:28:20.354 [main] INFO  com.example.demo.DemoApplication - Starting DemoApplication using Java 1.8.0_311 on 吕升 with PID 10256 (E:\personal\project\demo\target\classes started by sheng.lv in E:\personal\project\demo)
-2021-12-02 12:28:20.361 [main] INFO  com.example.demo.DemoApplication - No active profile set, falling back to default profiles: default
-2021-12-02 12:28:21.166 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
-2021-12-02 12:28:21.166 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
-2021-12-02 12:28:21.167 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.54]
-2021-12-02 12:28:21.242 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2021-12-02 12:28:21.520 [main] INFO  springfox.documentation.spring.web.WebMvcPropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
-2021-12-02 12:28:21.680 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
-2021-12-02 12:28:21.694 [main] INFO  springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper - Documentation plugins bootstrapped
-2021-12-02 12:28:21.698 [main] INFO  springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
-2021-12-02 12:28:21.717 [main] INFO  springfox.documentation.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
-2021-12-02 12:28:21.766 [main] INFO  com.example.demo.DemoApplication - Started DemoApplication in 1.753 seconds (JVM running for 2.641)
-2021-12-02 12:28:50.648 [http-nio-8888-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-12-02 12:31:14.138 [main] INFO  com.example.demo.DemoApplication - Starting DemoApplication using Java 1.8.0_311 on 吕升 with PID 14836 (E:\personal\project\demo\target\classes started by sheng.lv in E:\personal\project\demo)
-2021-12-02 12:31:14.145 [main] INFO  com.example.demo.DemoApplication - No active profile set, falling back to default profiles: default
-2021-12-02 12:31:15.143 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
-2021-12-02 12:31:15.144 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
-2021-12-02 12:31:15.144 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.54]
-2021-12-02 12:31:15.219 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2021-12-02 12:31:15.469 [main] INFO  springfox.documentation.spring.web.WebMvcPropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
-2021-12-02 12:31:15.669 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
-2021-12-02 12:31:15.684 [main] INFO  springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper - Documentation plugins bootstrapped
-2021-12-02 12:31:15.687 [main] INFO  springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
-2021-12-02 12:31:15.707 [main] INFO  springfox.documentation.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
-2021-12-02 12:31:15.757 [main] INFO  com.example.demo.DemoApplication - Started DemoApplication in 1.956 seconds (JVM running for 2.908)
-2021-12-02 12:31:26.805 [main] INFO  com.example.demo.DemoApplication - Starting DemoApplication using Java 1.8.0_311 on 吕升 with PID 4288 (E:\personal\project\demo\target\classes started by sheng.lv in E:\personal\project\demo)
-2021-12-02 12:31:26.813 [main] INFO  com.example.demo.DemoApplication - No active profile set, falling back to default profiles: default
-2021-12-02 12:31:27.581 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
-2021-12-02 12:31:27.581 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
-2021-12-02 12:31:27.581 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.54]
-2021-12-02 12:31:27.656 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2021-12-02 12:31:27.897 [main] INFO  springfox.documentation.spring.web.WebMvcPropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
-2021-12-02 12:31:28.080 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
-2021-12-02 12:31:28.092 [main] INFO  springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper - Documentation plugins bootstrapped
-2021-12-02 12:31:28.096 [main] INFO  springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
-2021-12-02 12:31:28.115 [main] INFO  springfox.documentation.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
-2021-12-02 12:31:28.161 [main] INFO  com.example.demo.DemoApplication - Started DemoApplication in 1.676 seconds (JVM running for 2.509)
-2021-12-02 12:31:33.871 [http-nio-8888-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-03-17 20:02:13.350 [main] INFO  com.example.subdemo.SubDemoApplication - Starting SubDemoApplication on 吕升 with PID 11836 (E:\personal\project\demo\sub-demo\target\classes started by sheng.lv in E:\personal\project\demo)
+2022-03-17 20:02:13.363 [main] INFO  com.example.subdemo.SubDemoApplication - No active profile set, falling back to default profiles: default
+2022-03-17 20:02:15.274 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2022-03-17 20:02:15.275 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-03-17 20:02:15.275 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.29]
+2022-03-17 20:02:15.369 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-03-17 20:02:16.624 [main] INFO  springfox.documentation.spring.web.WebMvcPropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+2022-03-17 20:02:16.922 [main] INFO  org.flywaydb.core.internal.license.VersionPrinter - Flyway Community Edition 6.0.8 by Redgate
+2022-03-17 20:02:16.944 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-03-17 20:02:17.482 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-03-17 20:02:17.510 [main] INFO  org.flywaydb.core.internal.database.DatabaseFactory - Database: jdbc:mysql://localhost:3306/demo (MySQL 8.0)
+2022-03-17 20:02:17.704 [main] INFO  org.flywaydb.core.internal.command.DbValidate - Successfully validated 3 migrations (execution time 00:00.065s)
+2022-03-17 20:02:17.711 [main] INFO  org.flywaydb.core.internal.command.DbMigrate - Current version of schema `demo`: 2.0.4
+2022-03-17 20:02:17.712 [main] INFO  org.flywaydb.core.internal.command.DbMigrate - Schema `demo` is up to date. No migration necessary.
+2022-03-17 20:02:17.924 [main] INFO  springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper - Documentation plugins bootstrapped
+2022-03-17 20:02:17.926 [main] INFO  springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2022-03-17 20:02:17.965 [main] INFO  springfox.documentation.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2022-03-17 20:02:18.136 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2022-03-17 20:02:18.154 [main] INFO  com.example.subdemo.SubDemoApplication - Started SubDemoApplication in 5.128 seconds (JVM running for 6.156)
+2022-03-17 20:02:20.880 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2022-03-17 20:02:20.902 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
