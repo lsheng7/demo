@@ -1,2 +1,5 @@
-package com.example.subsecuritybook.controller;public class UserController {
+package com.example.subsecuritybook.controller;
+
+public class UserController {
+
 }

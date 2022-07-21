@@ -1,2 +1,5 @@
-package com.example.subsecuritybook.service.impl;public class AuthticationProviderImpl {
+package com.example.subsecuritybook.service.impl;
+
+public class AuthenticationProviderImpl {
+
 }

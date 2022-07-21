@@ -1,2 +1,5 @@
-package com.example.subsecuritybook.handler;public class AuthenticationSuccessHandlerImpl {
+package com.example.subsecuritybook.handler;
+
+public class AuthenticationSuccessHandlerImpl {
+
 }

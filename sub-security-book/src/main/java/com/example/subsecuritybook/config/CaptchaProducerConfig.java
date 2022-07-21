@@ -1,2 +1,5 @@
-package com.example.subsecuritybook.config;public class CaptchaProducerConfig {
+package com.example.subsecuritybook.config;
+
+public class CaptchaProducerConfig {
+
 }

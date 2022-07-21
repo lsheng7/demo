@@ -1,4 +1,4 @@
-package com.example.subsecuritybook.service;
+package com.example.subsecuritybook.service.impl;
 
 import com.baomidou.mybatisplus.core.toolkit.Wrappers;
 import com.example.subsecuritybook.bean.UserPo;
@@ -11,7 +11,7 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
 @Service
-public class MyUserDetailsService implements UserDetailsService {
+public class UserDetailsServiceImpl implements UserDetailsService {
 
     @Resource
     private UserMapper userMapper;

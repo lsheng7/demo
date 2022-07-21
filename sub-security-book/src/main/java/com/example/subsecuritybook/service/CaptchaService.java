@@ -1,2 +1,5 @@
-package com.example.subsecuritybook.service;public class CaptchaService {
+package com.example.subsecuritybook.service;
+
+public interface CaptchaService {
+
 }
