@@ -1,5 +1,6 @@
-package com.example.subsecuritybook.service;
+package com.example.subsecurity.service.impl;
 
+import com.example.subsecurity.service.CaptchaService;
 import org.springframework.stereotype.Service;
 
 @Service

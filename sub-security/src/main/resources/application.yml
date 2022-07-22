@@ -13,5 +13,9 @@ spring:
     name: sub-security
   flyway:
     enabled: false
+  security:
+    user:
+      name: root
+      password: root
 server:
   port: 8082
