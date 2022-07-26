@@ -1,5 +1,7 @@
 package com.example.subsecurity.security;
 
+import com.example.subsecurity.filter.MyAuthenticationFailureHandler;
+import com.example.subsecurity.filter.VerificationCodeFilter;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.annotation.Bean;
 import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
@@ -8,6 +10,7 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
 @Slf4j
 @EnableWebSecurity
@@ -22,7 +25,6 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         return new BCryptPasswordEncoder();
     }
 
-
 //    public static void main(String[] args) {
 //        //$2a$10$/bLurnqJRneb08xatxbi7O6lU6pZ41JGK4DWUNv8B.vIqc7ORgc2e
 //        System.out.println(new BCryptPasswordEncoder().encode("root"));
@@ -31,6 +33,10 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests()
+                .antMatchers("/user/admin")
+//                .hasRole("ADMIN")
+                .hasAuthority("ADMIN")
+                .antMatchers("/user/captcha").permitAll()
                 .anyRequest().authenticated()
                 .and()
                 .formLogin()
@@ -42,16 +48,14 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 //                    log.info("登录成功");
 //                    log.info(authentication.getAuthorities().toString());
 //                })
-                .failureHandler((request, response, exception) -> {
-                    log.error(exception.getMessage());
-                })
+                .failureHandler(new MyAuthenticationFailureHandler())
+//                .failureHandler((request, response, exception) -> {
+//                    log.error(exception.getMessage());
+//                })
                 .permitAll()
                 .and()
-                .authorizeRequests()
-                .antMatchers("/user/admin")
-//                .hasRole("ADMIN")
-                .hasAuthority("ADMIN")
-                .and()
+                //将自定义的过滤器添加到UsernamePasswordAuthenticationFilter之前
+                .addFilterBefore(new VerificationCodeFilter(), UsernamePasswordAuthenticationFilter.class)
                 .csrf()
                 .disable();
     }
