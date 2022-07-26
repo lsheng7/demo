@@ -1,4 +1,4 @@
-package com.example.subsecurity.exception;
+package com.example.subsecurity.verify.way1;
 
 
 import org.springframework.security.core.AuthenticationException;

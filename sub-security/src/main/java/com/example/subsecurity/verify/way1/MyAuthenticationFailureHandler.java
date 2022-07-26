@@ -1,5 +1,4 @@
-package com.example.subsecurity.filter;
-
+package com.example.subsecurity.verify.way1;
 
 import cn.hutool.core.util.StrUtil;
 import java.io.IOException;

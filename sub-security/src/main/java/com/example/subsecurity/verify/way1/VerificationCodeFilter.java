@@ -1,7 +1,6 @@
-package com.example.subsecurity.filter;
+package com.example.subsecurity.verify.way1;
 
 import cn.hutool.core.util.StrUtil;
-import com.example.subsecurity.exception.VerificationCodeException;
 import java.io.IOException;
 import javax.servlet.FilterChain;
 import javax.servlet.ServletException;
@@ -15,8 +14,7 @@ public class VerificationCodeFilter extends OncePerRequestFilter {
 
     private static final String LOGIN_URI = "/user/login";
     private static final String CAPTCHA = "captcha";
-
-    private AuthenticationFailureHandler authenticationFailureHandler = new MyAuthenticationFailureHandler();
+    private final AuthenticationFailureHandler authenticationFailureHandler = new MyAuthenticationFailureHandler();
 
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain)
@@ -48,4 +46,5 @@ public class VerificationCodeFilter extends OncePerRequestFilter {
             throw new VerificationCodeException();
         }
     }
+
 }

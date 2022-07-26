@@ -1,7 +1,7 @@
-package com.example.subsecurity.security;
+package com.example.subsecurity.verify.way1;
 
-import com.example.subsecurity.filter.MyAuthenticationFailureHandler;
-import com.example.subsecurity.filter.VerificationCodeFilter;
+import com.example.subsecurity.verify.way1.MyAuthenticationFailureHandler;
+import com.example.subsecurity.verify.way1.VerificationCodeFilter;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.annotation.Bean;
 import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;

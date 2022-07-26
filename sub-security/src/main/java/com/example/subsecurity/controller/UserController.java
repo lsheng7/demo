@@ -2,7 +2,6 @@ package com.example.subsecurity.controller;
 
 import com.example.subsecurity.service.CaptchaService;
 import javax.annotation.Resource;
-import javax.servlet.http.HttpServletRequest;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -18,7 +17,6 @@ public class UserController {
 //    public void login(@RequestParam String username, @RequestParam String password) {
 //        log.info("username={},password={}", username, password);
 //    }
-
 
     @Resource
     private CaptchaService captchaService;
