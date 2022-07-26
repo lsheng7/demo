@@ -1,16 +1,16 @@
-//package com.example.subsecurity.verify.way1;
+//package com.example.subsecurity.verify.way2.login;
 //
-//import com.example.subsecurity.verify.way1.MyAuthenticationFailureHandler;
-//import com.example.subsecurity.verify.way1.VerificationCodeFilter;
+//import javax.annotation.Resource;
 //import lombok.extern.slf4j.Slf4j;
 //import org.springframework.context.annotation.Bean;
+//import org.springframework.security.authentication.AuthenticationProvider;
+//import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 //import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 //import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 //import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 //import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 //import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 //import org.springframework.security.crypto.password.PasswordEncoder;
-//import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 //
 //@Slf4j
 //@EnableWebSecurity
@@ -18,17 +18,19 @@
 //public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 //
 //
+//    @Resource
+//    private AuthenticationProvider authenticationProvider;
+//
 //    @Bean
 //    public PasswordEncoder passwordEncoder() {
-//        //spring security 5.0开始必须指定加密方式 否则报错:
-//        //There is no PasswordEncoder mapped for the id “null“
 //        return new BCryptPasswordEncoder();
 //    }
 //
-////    public static void main(String[] args) {
-////        //$2a$10$/bLurnqJRneb08xatxbi7O6lU6pZ41JGK4DWUNv8B.vIqc7ORgc2e
-////        System.out.println(new BCryptPasswordEncoder().encode("root"));
-////    }
+//    @Override
+//    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+//        //使用自定义的provider来完成用户认证的逻辑 默认情况下使用的是DaoAuthenticationProvider
+//        auth.authenticationProvider(authenticationProvider);
+//    }
 //
 //    @Override
 //    protected void configure(HttpSecurity http) throws Exception {
@@ -48,14 +50,9 @@
 ////                    log.info("登录成功");
 ////                    log.info(authentication.getAuthorities().toString());
 ////                })
-//                .failureHandler(new MyAuthenticationFailureHandler())
-////                .failureHandler((request, response, exception) -> {
-////                    log.error(exception.getMessage());
-////                })
+//                .failureHandler((request, response, exception) -> log.error(exception.getMessage()))
 //                .permitAll()
 //                .and()
-//                //将自定义的过滤器添加到UsernamePasswordAuthenticationFilter之前
-//                .addFilterBefore(new VerificationCodeFilter(), UsernamePasswordAuthenticationFilter.class)
 //                .csrf()
 //                .disable();
 //    }
