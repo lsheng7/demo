@@ -1,5 +1,6 @@
 package com.example.subsecurity.verify.way2.verify;
 
+import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
 import org.springframework.security.core.AuthenticationException;
@@ -14,7 +15,6 @@ import org.springframework.stereotype.Component;
 @Component
 public class MyAuthenticationProvider extends DaoAuthenticationProvider {
 
-
     /***
      * 构造函数注入UserDetailsService及PasswordEncoder的Bean对象
      * @param userDetailsService
@@ -24,7 +24,6 @@ public class MyAuthenticationProvider extends DaoAuthenticationProvider {
         this.setUserDetailsService(userDetailsService);
         this.setPasswordEncoder(passwordEncoder);
     }
-
 
     /***
      * 实现验证码的校验
@@ -36,8 +35,16 @@ public class MyAuthenticationProvider extends DaoAuthenticationProvider {
     protected void additionalAuthenticationChecks(UserDetails userDetails, UsernamePasswordAuthenticationToken authentication)
             throws AuthenticationException {
         //TODO 实现图形验证码的校验逻辑
-
+        final MyWebAuthenticationDetails myWebAuthenticationDetails = (MyWebAuthenticationDetails) authentication.getDetails();
+        //验证码校验
+        if (!myWebAuthenticationDetails.isImageCodeIsRight()) {
+            throw new VerificationCodeException();
+        }
         //调用父类方法完成密码验证
-        super.additionalAuthenticationChecks(userDetails, authentication);
+        try {
+            super.additionalAuthenticationChecks(userDetails, authentication);
+        } catch (BadCredentialsException exception) {
+            throw new UserNameOrPasswordException();
+        }
     }
 }

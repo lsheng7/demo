@@ -1,23 +1,35 @@
 package com.example.subsecurity.verify.way2.verify;
 
+import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.annotation.Bean;
+import org.springframework.security.authentication.AuthenticationDetailsSource;
+import org.springframework.security.authentication.AuthenticationProvider;
+import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.web.authentication.WebAuthenticationDetails;
 
 @Slf4j
 @EnableWebSecurity
 @EnableGlobalMethodSecurity(proxyTargetClass = true, prePostEnabled = true)
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
+    @Resource
+    private AuthenticationDetailsSource<HttpServletRequest, WebAuthenticationDetails> myWebAuthenticationDetailsSource;
 
-    @Bean
-    public PasswordEncoder passwordEncoder() {
-        return new BCryptPasswordEncoder();
+    @Resource
+    private AuthenticationProvider authenticationProvider;
+
+    @Override
+    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+        //应用AuthenticationProvider
+        auth.authenticationProvider(authenticationProvider);
     }
 
     @Override
@@ -38,7 +50,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 //                    log.info("登录成功");
 //                    log.info(authentication.getAuthorities().toString());
 //                })
-                .failureHandler((request, response, exception) -> log.error(exception.getMessage()))
+                .authenticationDetailsSource(myWebAuthenticationDetailsSource)
+                .failureHandler(new MyAuthenticationFailureHandler())
                 .permitAll()
                 .and()
                 .csrf()
