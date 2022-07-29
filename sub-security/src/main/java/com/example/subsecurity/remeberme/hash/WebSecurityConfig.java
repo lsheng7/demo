@@ -1,19 +1,16 @@
-//package com.example.subsecurity.verify.way2.verify;
+//package com.example.subsecurity.remeberme.hash;
 //
+//import com.example.subsecurity.remeberme.MyAuthenticationFailureHandler;
 //import javax.annotation.Resource;
-//import javax.servlet.http.HttpServletRequest;
 //import lombok.extern.slf4j.Slf4j;
 //import org.springframework.context.annotation.Bean;
-//import org.springframework.security.authentication.AuthenticationDetailsSource;
-//import org.springframework.security.authentication.AuthenticationProvider;
-//import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 //import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 //import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 //import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 //import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+//import org.springframework.security.core.userdetails.UserDetailsService;
 //import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 //import org.springframework.security.crypto.password.PasswordEncoder;
-//import org.springframework.security.web.authentication.WebAuthenticationDetails;
 //
 //@Slf4j
 //@EnableWebSecurity
@@ -21,23 +18,19 @@
 //public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 //
 //    @Resource
-//    private AuthenticationDetailsSource<HttpServletRequest, WebAuthenticationDetails> myWebAuthenticationDetailsSource;
+//    private UserDetailsService userDetailsService;
 //
-//    @Resource
-//    private AuthenticationProvider authenticationProvider;
-//
-//    @Override
-//    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-//        //应用AuthenticationProvider
-//        auth.authenticationProvider(authenticationProvider);
+//    @Bean
+//    public PasswordEncoder passwordEncoder() {
+//        return new BCryptPasswordEncoder();
 //    }
 //
 //    @Override
 //    protected void configure(HttpSecurity http) throws Exception {
 //        http.authorizeRequests()
-//                .antMatchers("/user/admin")
+////                .antMatchers("/user/admin")
 ////                .hasRole("ADMIN")
-//                .hasAuthority("ADMIN")
+////                .hasAuthority("ADMIN")
 //                .antMatchers("/user/captcha").permitAll()
 //                .anyRequest().authenticated()
 //                .and()
@@ -50,9 +43,24 @@
 ////                    log.info("登录成功");
 ////                    log.info(authentication.getAuthorities().toString());
 ////                })
-//                .authenticationDetailsSource(myWebAuthenticationDetailsSource)
 //                .failureHandler(new MyAuthenticationFailureHandler())
 //                .permitAll()
+//                .and()
+//                //rememberMe配置后这个位置必须指定userDetailsService
+////        cm9vdDoxNjYwMTk0NDc2MTM3OjFlNTVkMjljNTI5OGFiMzc2ZThmZjNiZTQ0ZmU5NzU5是cookie值
+////        final byte[] arr = Base64.decode(
+////                "cm9vdDoxNjYwMTk0NDc2MTM3OjFlNTVkMjljNTI5OGFiMzc2ZThmZjNiZTQ0ZmU5NzU5");
+//                //root:1660194476137:1e55d29c5298ab376e8ff3be44fe9759
+//                //加密串中包含了用户名
+////        System.out.println(new String(arr));
+//
+////        hashInfo=md5Hex(username+":"+expirationTime+":"+password+":"+key)
+////        username+":"+expirationTime+":"+hashInfo
+////        root:1660194476137:1e55d29c5298ab376e8ff3be44fe9759
+////        1660194476137<==>2022-8-11 13:7:56
+//                .rememberMe().userDetailsService(userDetailsService)
+//                //防止每次生成的key 随服务重启后发生变化及多实例部署情况下 会导致自动登录策略失效
+//                .key("oceanus0521")
 //                .and()
 //                .csrf()
 //                .disable();

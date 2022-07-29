@@ -6,21 +6,31 @@
 </head>
 <body>
 <h1>登陆</h1>
-<form method="post" action="/user/login">
-  <div>
-    用户名：<input type="text" name="username">
-  </div>
-  <div>
-    密码：<input type="password" name="password">
-  </div>
-  <div>
-    验证码:<input type="text" name="captcha" placeholder="captcha"/>
-    <img src="/user/captcha" alt="captcha" height="25px" width="75px" style="margin-left: 10px"/>
-  </div>
-  <div>
-    <label><input type="checkbox" name="remember-me"/>自动登录</label>
-    <button type="submit">立即登陆</button>
-  </div>
-</form>
+  <form method="post" action="/user/login">
+    <div>
+      用户名：<input type="text" name="username">
+    </div>
+    <div>
+      密码：<input type="password" name="password">
+    </div>
+    <div>
+      验证码:<input type="text" name="captcha" placeholder="captcha"/>
+      <img src="/user/captcha" id='code' alt="captcha" height="25px" width="75px" style="margin-left: 10px"/>
+    </div>
+    <div>
+      <label><input type="checkbox" name="remember-me"/>自动登录</label>
+      <button type="submit">立即登陆</button>
+    </div>
+  </form>
 </body>
+<script>
+  window.onload=function(){
+    document.getElementById('code').src='/user/captcha'
+  }
+  var code = document.getElementById('code')
+  code.addEventListener('click',(e)=>{
+    console.log('刷新验证码===');
+    document.getElementById('code').src='/user/captcha'
+  })
+</script>
 </html>
