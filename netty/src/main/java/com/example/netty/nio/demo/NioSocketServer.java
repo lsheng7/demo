@@ -70,8 +70,8 @@ public class NioSocketServer {
         byteBuffer.flip();
         System.out.println("socketChannel#hashCode=" + socketChannel.hashCode());
         System.out.println("客户端传递的内容为:" + new String(byteBuffer.array(), 0, read));
-        socketChannel.write(ByteBuffer.wrap("收到".getBytes()));
-//        socketChannel.register(selector, SelectionKey.OP_WRITE);
+//        socketChannel.write(ByteBuffer.wrap("收到".getBytes()));
+        socketChannel.register(selector, SelectionKey.OP_WRITE);
     }
 
     public static void writeAdapter(SelectionKey selectionKey) throws Exception {
