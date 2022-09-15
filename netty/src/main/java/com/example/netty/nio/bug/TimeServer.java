@@ -12,7 +12,7 @@ import java.util.Iterator;
 
 public class TimeServer {
 
-    private int port;
+    private final int port;
 
     public TimeServer(int port) {
         this.port = port;
