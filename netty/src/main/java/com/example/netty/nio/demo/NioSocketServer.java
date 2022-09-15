@@ -26,6 +26,10 @@ public class NioSocketServer {
                 System.out.println("未获取到客户端链接当前线程非阻塞运行");
                 continue;
             }
+            //Tip: SelectionKey是同Channel一对一的关系 只要SelectionKey中的Channel是一致的 那么SelectionKey.hashCode值就是一样的
+            //A selection key is created each time a channel is registered with a selector 注册的时候创建一次
+            //selectedKeys方法返回有事件发生的通道数量
+            //keys方法返回的是所有的通道包含ServerSocketChannel及SocketChannel
             Set<SelectionKey> selectionKeys = selector.selectedKeys();
             Iterator<SelectionKey> iterator = selectionKeys.iterator();
             while (iterator.hasNext()) {
@@ -67,7 +71,7 @@ public class NioSocketServer {
         System.out.println("socketChannel#hashCode=" + socketChannel.hashCode());
         System.out.println("客户端传递的内容为:" + new String(byteBuffer.array(), 0, read));
         socketChannel.write(ByteBuffer.wrap("收到".getBytes()));
-        socketChannel.register(selector, SelectionKey.OP_WRITE);
+//        socketChannel.register(selector, SelectionKey.OP_WRITE);
     }
 
     public static void writeAdapter(SelectionKey selectionKey) throws Exception {
