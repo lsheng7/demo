@@ -25,10 +25,14 @@ public class NioSocketClient {
             for (SelectionKey next : selectionKeys) {
                 if (next.isConnectable()) {
                     System.out.println("开始客户端链接");
+                    System.out.println("next="+next.hashCode());
                     socketChannel.finishConnect();
+                    System.out.println("socketChannel#hashCode=" + socketChannel.hashCode());
                     socketChannel.register(selector, SelectionKey.OP_WRITE);
                 } else if (next.isWritable()) {
                     System.out.println("请输入要发送的信息:");
+                    System.out.println("socketChannel#hashCode=" + socketChannel.hashCode());
+                    System.out.println("next="+next.hashCode());
                     String result = scanner.next();
                     ByteBuffer byteBuffer = ByteBuffer.allocate(1024);
                     byteBuffer.put(result.getBytes("GBK"));
@@ -38,6 +42,8 @@ public class NioSocketClient {
                     System.out.println("结束~！！！~~~~");
                 } else if (next.isReadable()) {
                     System.out.print("服务端返回的消息:");
+                    System.out.println("socketChannel#hashCode=" + socketChannel.hashCode());
+                    System.out.println("next="+next.hashCode());
                     ByteBuffer byteBuffer = ByteBuffer.allocate(1024);
                     int read = socketChannel.read(byteBuffer);
                     System.out.println(new String(byteBuffer.array(), 0, read));
