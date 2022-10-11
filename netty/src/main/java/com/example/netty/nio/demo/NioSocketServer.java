@@ -18,7 +18,7 @@ public class NioSocketServer {
         ServerSocketChannel serverSocketChannel = ServerSocketChannel.open();
         //必须设置成非阻塞的
         serverSocketChannel.configureBlocking(false);
-        serverSocketChannel.bind(new InetSocketAddress("127.0.0.1", 9999));
+        serverSocketChannel.bind(new InetSocketAddress(9999));
         selector = Selector.open();
         serverSocketChannel.register(selector, SelectionKey.OP_ACCEPT);
         while (true) {

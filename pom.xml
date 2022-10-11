@@ -155,7 +155,6 @@
         <!--      <groupId>org.springframework.boot</groupId>-->
         <!--      <artifactId>spring-boot-starter-jdbc</artifactId>-->
         <!--    </dependency>-->
-
         <!--mybatis-plus-->
         <dependency>
             <groupId>com.baomidou</groupId>
@@ -170,24 +169,17 @@
         </dependency>
     </dependencies>
 
+    <modules>
+        <module>netty</module>
+        <module>sub-security</module>
+        <module>sub-security-book</module>
+    </modules>
+
     <build>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-            <plugin>
-                <groupId>org.flywaydb</groupId>
-                <artifactId>flyway-maven-plugin</artifactId>
-                <configuration>
-                    <user>postgres</user>
-                    <password>Qr@77.88</password>
-                    <driver>org.postgresql.Driver</driver>
-                    <url>jdbc:postgresql://192.168.0.99:5432/runoobdb</url>
-                    <baselineOnMigrate>true</baselineOnMigrate>
-                    <!-- //sql脚本位置，flyway会自动去找到这个目录并且执行里面的sql脚本 -->
-                    <locations>classpath:db/migration/</locations>
-                </configuration>
             </plugin>
         </plugins>
     </build>
